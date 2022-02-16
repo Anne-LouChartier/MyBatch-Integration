@@ -1,0 +1,117 @@
+body {
+    /* background: linear-gradient(180deg, #12F4A3 0%, #A8B1FF 100%); */
+    background: linear-gradient(180deg, rgba(18,244,163,1) 0%, rgba(168,177,255,0.7264093137254901) 35%);
+}
+
+i {
+    color: white;
+}
+
+header {
+    padding: 10px;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-around;
+}
+
+.header {
+    /* width: 80%; */
+    color: white;
+    /* background-color: yellow; */
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    border: solid white 5px;
+    border-radius: 10px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-around;
+    color: white;
+}
+
+.recherche {
+    display: flex;
+    margin: 0;
+    /* padding: 15px; */
+}
+
+#recherche {
+    border: solid 2px;
+    border-radius: 10px;
+}
+
+#searchsubmit {
+    border: solid white 5px;
+    border-radius: 10px;
+    padding: 15px;
+    width: 25px;
+    height: 25px;
+    background-color: #3BE3BC;
+}
+
+#submit {
+    border: solid white 2px;
+    border-radius: 10px;
+    color: #3BE3BC;
+    background-color: white;
+    padding: 10px;
+}
+
+#filtre, #recherche {
+    display: flex;
+    justify-content: center;
+}
+
+footer {
+    padding: 15px;
+    /* background-color: red; */
+    display: flex;
+    justify-content: space-around;
+}
+
+#articles {
+    display: flex;
+    padding: 10px;
+    color: white;
+}
+
+#article1, #article2 {
+    border: solid 5px;
+    border-radius: 10px;
+    border-color: white;
+    margin: 9px;
+    padding: 10px;
+
+}
+
+.titre-article1, .titre-article2 {
+    display: flex;
+    justify-content: center;
+}
+
+#article-principal {
+    color: white;
+    border: solid 5px;
+    border-radius: 10px;
+    border-color: white;
+    margin: 9px;
+    padding: 10px;
+}
+
+#filtre, #recherche {
+    border: solid 2px;
+    border-radius: 10px;
+    border-color: white;
+    margin: 15px;
+    padding: 5px;
+}
+
+.image-article1, .image-article2, .image-articleprincipal {
+    float: right;
+}
+
+/* #recherche {
+    color: #3BE3BC;
+} On dirait que la couleur ne s'applique pas sur un placeholder  */
