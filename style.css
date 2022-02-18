@@ -1,3 +1,29 @@
+@font-face {
+    font-family: "Montserrat";
+    src: url("Montserrat-Medium.woff");
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: url("Montserrat-Bold.woff");
+    font-weight: bold;
+  }
+  
+  @font-face {
+    font-family: "Montserrat";
+    src: url("Montserrat-Italic.woff");
+    font-style: italic;
+  }
+  
+  body {
+    font-family: "Montserrat", sans-serif;
+  }
+  
+  h3 {
+    font-weight: bold;
+  }
+    
+
 body {
     background: linear-gradient(180deg, #12F4A3 0%, #A8B1FF 100%);
     width: 100vh;
@@ -80,16 +106,18 @@ p {
 }
 
 .titre-article3, .titre-article4, .titre-article5, .titre-article6 {
-    font-size: 20px;
+    font-size: 17px;
     text-decoration: underline;
 }
 
+.contenu-article3, .contenu-article4, .contenu-article5, .contenu-article6 {
+    font-size: 12px;
+}
 
 .promo-naturalia, .promo-biocbon, .promo-lavieenclaire, .promo-epiceriegood, .promo-biocoop {
-    font-size: 17px;
     font-style: italic;
     color: #0b7e2ee3;
-    font-size: 25px;
+    font-size: 18px;
 }
 
 .naturalia, .biocbon, .lavieenclaire, .epiceriegood, .biocoop {
@@ -248,17 +276,33 @@ input {
         margin: auto;
     } .articles-secondaires {
         margin-top: 30px;
+} .articlesprincipaux {
+    display: flex;
+    flex-direction: column;
+} .article-principal, .article-principal2 {
+    width: 80vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+} .image-articleprincipal, .image-articleprincipal2 {
+    display: none;
+} .contenu-article1, .contenu-article2 {
+    height: 15vh;
+    overflow: scroll;
+    overflow-x: scroll;
+    margin: 0, 0, 0, 15px;
+} .titre-articleprincipal, .titre-articleprincipal2 {
+    font-size: 18px;
+} .contenu-articleprincipal, .contenu-articleprincipal2 {
+    font-size: 15px;
 }
 
 @media (min-width: 450px) {
-}    .suggestionsshops {
+    .articlesprincipaux {
         display: flex;
-        flex-direction: column;
-        width: 90vh;
-        }     .maps {
-            width: 60vh;
-            height: 50vh;
-        } .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
+        flex-direction: row;
+    }
+         .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
             width: 30vh;
             height: 15vh;
             } .contenu-article3, .contenu-article4, .contenu-article5, .contenu-article6 {
@@ -266,41 +310,60 @@ input {
             } .articles {
                 display: flex;
                 flex-direction: column-reverse;
+            } .promo-naturalia, .promo-lavieenclaire, .promo-epiceriegood, .promo-biocoop, .promo-biocbon {
+                font-size: 12px;
             }
-    
-
-@media (min-width: 800px) {
-    header {
-        width: 100vh;
-    }
-    .suggestionsshops {
-        display: flex;
-        flex-direction: row;
-        overflow: scroll;
-        overflow-x: scroll;
-    } .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
-        width: 40vh;
-        height: 25vh;
         }
-        .maps {
-            width: 70vh;
-            height: 50vh;
-        }
-    .image-article1, .image-article2 {
-        float: left;
-        width: 25vh;
-        height: 20vh;
-    }
-    .articles {
+ 
+@media (min-width: 645px) {
+   .articles {
+       display: flex;
+       flex-direction: row;
+       height: fit-content;
+       margin-bottom: 25px;
+   } .articles-secondaires {
+       display: none;
+   }
+    .contenu-article1, .contenu-article2 {
+        font-size: 18px;
+        max-width: fit-content;
+        height: 300px;
+    } .image-article1, .image-article2 {
+        width: 25h;
+        height: 15vh;
+    } .titre-article1, .titre-article2 {
+        font-size: 20px;
+    } .image-article1, .image-article2 {
         display: flex;
         justify-content: center;
-        flex-direction: row;
-    }
-    .contenu-article3, .contenu-article4, .contenu-article5, .contenu-article6 {
-        font-size: 17px;
-    }
-    .contenu-article1, .contenu-article2 {
-        width: 70vh;
+        margin-bottom: 25px;
+    } .image-articleprincipal, .image-articleprincipal2 {
+        width: 15vh;
+        height: 10vh;
+    } .article3, .article4, .article5, .article6 {
+        width: 40vh;
+        height: 20vh;
+    } .articles {
+        display: flex;
+        align-items: center;
+    } .titre-biocbon, .titre-biocoop, .titre-epiceriegood, .titre-lavieenclaire, .titre-naturalia {
         font-size: 20px;
+    } .infos-biocbon, .infos-biocoop, .infos-epiceriegood, .infos-lavieenclaire, .infos-naturalia {
+        font-size: 18px;
     }
-}}
+}
+        
+
+@media (min-width: 670px) {
+    .articles-secondaires {
+        display: flex;
+        flex-direction: column;
+        max-height: fit-content;
+    } .articles {
+        height: 100vh;
+    } .titre-article3, .titre-article4, .titre-article5 {
+        font-size: 18px;
+    } .nutriscore {
+        display: none;
+    }
+    }}
