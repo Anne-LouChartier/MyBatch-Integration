@@ -1,117 +1,304 @@
 body {
-    /* background: linear-gradient(180deg, #12F4A3 0%, #A8B1FF 100%); */
-    background: linear-gradient(180deg, rgba(18,244,163,1) 0%, rgba(168,177,255,0.7264093137254901) 35%);
+    background: linear-gradient(180deg, #12F4A3 0%, #A8B1FF 100%);
+    width: 100vh;
 }
 
-i {
-    color: white;
-}
-
-header {
-    padding: 10px;
-    /* background-color: blue; */
+.titre-section, header, footer{
     display: flex;
     justify-content: space-around;
-}
-
-.header {
-    /* width: 80%; */
     color: white;
-    /* background-color: yellow; */
-    display: flex;
-    justify-content: center;
-    padding: 15px;
-    border: solid white 5px;
-    border-radius: 10px;
-}
+    border: 3px white solid;
+    border-radius: 15px;
+    padding: 5px;
+    width: 100vh;
+    }
 
 .container {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
+    align-items: center;
+    border: 3px white solid;
+    border-radius: 15px;
+    padding: 5px;
+    width: 90;
+}
+
+.carte {
+    width: 100vh;
+}
+
+nav {
+    width: 100vh;
+}
+
+.maps {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 80vh ;
+}
+
+.suggestionsshops {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-flow: column;
+    box-sizing: content-box;
+    margin: auto;
+    line-height: 1px;
+    margin-bottom: 30px;
+}
+
+.image-naturalia, .image-biocbon , .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
+    width: 60vh;
+    height: 35vh;
+}
+
+.articles, .article-principal, .article-principal2 {
+    border: solid 4px white;
+    border-radius: 15px;
+    margin-top: 30px;
+    padding: 10px;
+    width: 100vh;
+    font-size: large;
+}
+
+p {
     color: white;
+    font-size: 25px;
+}
+
+
+.titre-naturalia, .titre-biocbon, .titre-lavieenclaire, .titre-epiceriegood, .titre-biocoop {
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.titre-article1, .titre-article2, .titre-articleprincipal, .titre-articleprincipal2 {
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+.titre-article3, .titre-article4, .titre-article5, .titre-article6 {
+    font-size: 20px;
+    text-decoration: underline;
+}
+
+
+.promo-naturalia, .promo-biocbon, .promo-lavieenclaire, .promo-epiceriegood, .promo-biocoop {
+    font-size: 17px;
+    font-style: italic;
+    color: #0b7e2ee3;
+    font-size: 25px;
+}
+
+.naturalia, .biocbon, .lavieenclaire, .epiceriegood, .biocoop {
+    margin-top: 15px;
+    border: 3px white solid;
+    border-radius: 15px;
+    padding: 15px;
+    margin: auto;
+    margin-bottom: 15px;
+}
+
+.avis-naturalia, .avis-biocbon, .avis-lavieenclaire, .avis-epiceriegood, .avis-biocoop {
+    font-size: 18px;
+    color: grey;
+    display: flex;
+    justify-content: flex-end;
+}
+
+h3 {
+    color: white;
+}
+
+.submit {
+    border: 3px solid white;
+    border-radius: 15px;
+    background-color: #9CB7F8;
+}
+
+.rechercheche {
+    width: 25vh;
+    align-items: center;
+    border-radius: 15px;
+    border-color: #9CB7F8;
+    padding: 5px;
+}
+
+.filtre {
+    width: 15vh;
+    height: 5vh;
+    align-items: center;
+    justify-content: center;
 }
 
 .recherche {
     display: flex;
-    margin: 0;
-    /* padding: 15px; */
+    align-items: center;
 }
 
-#recherche {
-    border: solid 2px;
-    border-radius: 10px;
+.searchsubmit {
+    width: 5vh;
+    height: 5vh;
+    border: 2px solid white;
+    border-radius: 15px;
+    background-color: #9CB7F8;
 }
 
-#searchsubmit {
-    border: solid white 5px;
-    border-radius: 10px;
-    padding: 15px;
-    width: 25px;
-    height: 25px;
-    background-color: #3BE3BC;
-}
-
-#submit {
-    border: solid white 2px;
-    border-radius: 10px;
-    color: #3BE3BC;
-    background-color: white;
-    padding: 10px;
-}
-
-#filtre, #recherche {
+.articlesprincipaux {
+    width: 100vh;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+    padding-left: 15px;
 }
 
-footer {
-    padding: 15px;
-    /* background-color: red; */
+.article-principal, .article-principal2 {
+    max-width: 45vh;
+    max-height: 300px;
+    overflow: visible;
+    overflow-x: scroll;
+    margin-top: 30px;
+}
+
+.articles-secondaires {
     display: flex;
-    justify-content: space-around;
+    overflow: scroll;
+    overflow-x: scroll;
+    margin: auto;
+    width: 90vh;
 }
 
-#articles {
-    display: flex;
-    padding: 10px;
-    color: white;
-}
-
-#article1, #article2 {
-    border: solid 5px;
-    border-radius: 10px;
-    border-color: white;
-    margin: 9px;
-    padding: 10px;
-
-}
-
-.titre-article1, .titre-article2 {
-    display: flex;
-    justify-content: center;
-}
-
-#article-principal {
-    color: white;
-    border: solid 5px;
-    border-radius: 10px;
-    border-color: white;
-    margin: 9px;
-    padding: 10px;
-}
-
-#filtre, #recherche {
-    border: solid 2px;
-    border-radius: 10px;
-    border-color: white;
-    margin: 15px;
-    padding: 5px;
-}
-
-.image-article1, .image-article2, .image-articleprincipal {
+.image-article1, .image-article2 {
     float: right;
+    width: 25vh;
+    height: 20vh;
+    border-radius: 10px;
 }
 
-/* #recherche {
-    color: #3BE3BC;
-} On dirait que la couleur ne s'applique pas sur un placeholder  */
+.image-articleprincipal, .image-articleprincipal2 {
+    float: right;
+    width: 25vh;
+    height: 20vh;
+    border-radius: 10px;
+}
+
+.article3, .article4, .article5, .article6 {
+    width: 55vh;
+    max-height: 25vh;
+    margin: 5px 10px 5px 10px;
+    overflow: scroll;
+    overflow-x: scroll;
+    padding: 5px;
+    border: 1px white solid;
+    border-radius: 10px;
+    font-size: 2vh;
+    color: white;
+    background-color: #9CB7F8;
+}
+
+.choix {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vh;
+    margin: auto;
+    margin-bottom: 20px;
+}
+
+.mags-partenaires, .livraison {
+    color: #9CB7F8;
+    background-color: white;
+    margin: auto;
+    width: 35vh;
+}
+
+.nutriscore {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    width: 15vh;
+    height: 8vh;
+}
+
+
+@media (min-width: 375px) {
+    .naturalia, .biocbon, .lavieenclaire, .epiceriegood, .biocoop {
+        margin: 15px;
+        background-color: white;
+        line-height: 1%;
+    }   
+    .maps {
+        width: 70vh;
+        height: 70vh;
+    } .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
+        width: 25vh;
+        height: 17vh;
+        }
+    .articles, .article-principal, header, .header, footer, .header2, .container {
+        width: 100vh;
+    }
+  }
+
+@media (min-width: 450px) {
+    .articles {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap-reverse;
+    }
+}    .suggestionsshops {
+        display: flex;
+        flex-direction: column-reverse;
+        width: 90vh;
+        overflow: visible;
+        overflow-x: scroll;
+        margin: auto;
+        }     .maps {
+            width: 60vh;
+            height: 50vh;
+        } .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
+            width: 30vh;
+            height: 15vh;
+            }
+    
+
+@media (min-width: 800px) {
+    header {
+        width: 100vh;
+    }
+    .suggestionsshops {
+        display: flex;
+        flex-direction: row;
+        overflow: scroll;
+        overflow-x: scroll;
+    } .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
+        width: 40vh;
+        height: 25vh;
+        }
+        .maps {
+            width: 70vh;
+            height: 50vh;
+        }
+    .image-article1, .image-article2 {
+        float: left;
+        width: 25vh;
+        height: 20vh;
+    }
+    .articles {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+    }
+    .contenu-article3, .contenu-article4, .contenu-article5, .contenu-article6 {
+        font-size: 17px;
+    }
+    .contenu-article1, .contenu-article2 {
+        width: 70vh;
+        font-size: 20px;
+    }
+    }
+
