@@ -20,14 +20,6 @@ body {
     border: 3px white solid;
     border-radius: 15px;
     padding: 5px;
-    width: 90;
-}
-
-.carte {
-    width: 100vh;
-}
-
-nav {
     width: 100vh;
 }
 
@@ -35,23 +27,28 @@ nav {
     display: flex;
     justify-content: center;
     margin: auto;
-    width: 80vh ;
+    width: 80vh;
+    margin-bottom: 30px;
 }
 
 .suggestionsshops {
     display: flex;
     justify-content: center;
     align-items: center;
-    flex-flow: column;
     box-sizing: content-box;
     margin: auto;
     line-height: 1px;
     margin-bottom: 30px;
+    overflow: scroll;
+    overflow-x: scroll;
 }
 
 .image-naturalia, .image-biocbon , .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
     width: 60vh;
     height: 35vh;
+    display: flex;
+    justify-content: center;
+    margin: auto;
 }
 
 .articles, .article-principal, .article-principal2 {
@@ -67,7 +64,6 @@ p {
     color: white;
     font-size: 25px;
 }
-
 
 .titre-naturalia, .titre-biocbon, .titre-lavieenclaire, .titre-epiceriegood, .titre-biocoop {
     display: flex;
@@ -225,44 +221,51 @@ h3 {
     height: 8vh;
 }
 
+input {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+}
+
 
 @media (min-width: 375px) {
     .naturalia, .biocbon, .lavieenclaire, .epiceriegood, .biocoop {
-        margin: 15px;
         background-color: white;
         line-height: 1%;
-    }   
-    .maps {
-        width: 70vh;
-        height: 70vh;
-    } .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
-        width: 25vh;
-        height: 17vh;
-        }
-    .articles, .article-principal, header, .header, footer, .header2, .container {
-        width: 100vh;
-    }
-  }
+        margin-top: 20px;
+    }   .titre-naturalia, .titre-biocbon, .titre-biocoop, .titre-lavieenclaire, .titre-epiceriegood {
+        color: #13F5A3;
+    } .infos-naturalia, .infos-biocbon, .infos-lavieenclaire, .infos-epiceriegood, .infos-biocoop {
+        color: #9CB7F8;
+        display: flex;
+        justify-content: center;
+    } .image-article1, .image-article2 {
+        float: left;
+    } .contenu-article1, .contenu-article2 {
+        width: 60vh;
+        display: flex;
+        justify-content: first baseline;
+        margin: auto;
+    } .articles-secondaires {
+        margin-top: 30px;
+}
 
 @media (min-width: 450px) {
-    .articles {
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap-reverse;
-    }
 }    .suggestionsshops {
         display: flex;
-        flex-direction: column-reverse;
+        flex-direction: column;
         width: 90vh;
-        overflow: visible;
-        overflow-x: scroll;
-        margin: auto;
         }     .maps {
             width: 60vh;
             height: 50vh;
         } .image-naturalia, .image-biocbon, .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
             width: 30vh;
             height: 15vh;
+            } .contenu-article3, .contenu-article4, .contenu-article5, .contenu-article6 {
+                font-size: 14px;
+            } .articles {
+                display: flex;
+                flex-direction: column-reverse;
             }
     
 
@@ -300,5 +303,4 @@ h3 {
         width: 70vh;
         font-size: 20px;
     }
-    }
-
+}}
