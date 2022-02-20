@@ -494,6 +494,7 @@ input {
         justify-content: center;
     } .contenu-article1, .contenu-article2 {
         height: 20vh;
+        align-items: center;
     } .article3, .article4, .article5, .article6 {
         height: 200px;
         width: 700px;
