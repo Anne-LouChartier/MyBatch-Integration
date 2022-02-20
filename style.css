@@ -1,17 +1,61 @@
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
 @font-face {
     font-family: "Montserrat";
-    src: url("Montserrat-Medium.woff");
+    src: url("Polices/Montserrat-Medium.woff");
   }
   
   @font-face {
     font-family: "Montserrat";
-    src: url("Montserrat-Bold.woff");
+    src: url("Polices/Montserrat-Bold.woff");
     font-weight: bold;
   }
   
   @font-face {
     font-family: "Montserrat";
-    src: url("Montserrat-Italic.woff");
+    src: url("Polices/Montserrat-Italic.woff");
     font-style: italic;
   }
   
@@ -35,8 +79,9 @@ body {
     color: white;
     border: 3px white solid;
     border-radius: 15px;
-    padding: 5px;
+    padding: 10px;
     width: 100vh;
+    margin-bottom: 15px;
     }
 
 .container {
@@ -50,11 +95,33 @@ body {
 }
 
 .maps {
+    width: 80vh;
+    height: 60vh;
+    margin-bottom: 30px;
+}
+
+.carte {
     display: flex;
     justify-content: center;
     margin: auto;
-    width: 80vh;
-    margin-bottom: 30px;
+}
+
+.contenu-article1, .contenu-article2 {
+    font-size: 17px;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.articlesprincipaux {
+    margin-bottom: 15px;
+}
+
+.titre-article1, .titre-article2 {
+    margin-bottom: 15px;
+}
+
+.titre-articleprincipal, .titre-articleprincipal2 {
+    font-size: 17px;
 }
 
 .suggestionsshops {
@@ -63,17 +130,25 @@ body {
     align-items: center;
     box-sizing: content-box;
     margin: auto;
-    line-height: 1px;
     margin-bottom: 30px;
     overflow: scroll;
     overflow-x: scroll;
 }
 
 .image-naturalia, .image-biocbon , .image-lavieenclaire, .image-epiceriegood, .image-biocoop {
-    width: 60vh;
-    height: 35vh;
+    width: 45vh;
+    height: 30vh;
     display: flex;
     justify-content: center;
+    margin: auto;
+}
+
+.naturalia, .biocbon, .biocoop, .lavieenclaire, .epiceriegood {
+    display: flex;
+    flex-direction: column;
+    border: 3px white solid;
+    border-radius: 15px;
+    padding: 15px;
     margin: auto;
 }
 
@@ -94,7 +169,7 @@ p {
 .titre-naturalia, .titre-biocbon, .titre-lavieenclaire, .titre-epiceriegood, .titre-biocoop {
     display: flex;
     justify-content: center;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: bold;
 }
 
@@ -102,7 +177,8 @@ p {
     display: flex;
     justify-content: center;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 20px;
+    margin-bottom: 10px;
 }
 
 .titre-article3, .titre-article4, .titre-article5, .titre-article6 {
@@ -120,20 +196,17 @@ p {
     font-size: 18px;
 }
 
-.naturalia, .biocbon, .lavieenclaire, .epiceriegood, .biocoop {
-    margin-top: 15px;
-    border: 3px white solid;
-    border-radius: 15px;
-    padding: 15px;
-    margin: auto;
-    margin-bottom: 15px;
-}
-
 .avis-naturalia, .avis-biocbon, .avis-lavieenclaire, .avis-epiceriegood, .avis-biocoop {
     font-size: 18px;
     color: grey;
     display: flex;
     justify-content: flex-end;
+}
+
+.infos-biocbon, .infos-biocoop, .infos-epiceriegood, .infos-lavieenclaire, .infos-naturalia {
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
 }
 
 h3 {
@@ -187,6 +260,10 @@ h3 {
     overflow: visible;
     overflow-x: scroll;
     margin-top: 30px;
+}
+
+.contenu-articleprincipal, .contenu-articleprincipal2 {
+    font-size: 15px;
 }
 
 .articles-secondaires {
@@ -258,8 +335,7 @@ input {
 
 @media (min-width: 375px) {
     .naturalia, .biocbon, .lavieenclaire, .epiceriegood, .biocoop {
-        background-color: white;
-        line-height: 1%;
+        background-color: #9CB7F8;
         margin-top: 20px;
     }   .titre-naturalia, .titre-biocbon, .titre-biocoop, .titre-lavieenclaire, .titre-epiceriegood {
         color: #13F5A3;
@@ -269,11 +345,6 @@ input {
         justify-content: center;
     } .image-article1, .image-article2 {
         float: left;
-    } .contenu-article1, .contenu-article2 {
-        width: 60vh;
-        display: flex;
-        justify-content: first baseline;
-        margin: auto;
     } .articles-secondaires {
         margin-top: 30px;
 } .articlesprincipaux {
@@ -284,17 +355,29 @@ input {
     display: flex;
     justify-content: center;
     margin: auto;
+    padding: 20px;
+    overflow: scroll;
+    overflow-x: scroll;
+    max-width: fit-content;
 } .image-articleprincipal, .image-articleprincipal2 {
     display: none;
 } .contenu-article1, .contenu-article2 {
-    height: 15vh;
+    height: 25vh;
+    width: 60vh;
+    display: flex;
+    justify-content: center;
     overflow: scroll;
     overflow-x: scroll;
-    margin: 0, 0, 0, 15px;
+    margin: auto;
+    font-size: 15px;
 } .titre-articleprincipal, .titre-articleprincipal2 {
     font-size: 18px;
-} .contenu-articleprincipal, .contenu-articleprincipal2 {
+} .promo-biocbon, .promo-biocoop, .promo-epiceriegood, .promo-lavieenclaire, .promo-naturalia {
     font-size: 15px;
+} .contenu-articleprincipal, .contenu-articleprincipal2 {
+    padding: 20px;
+    font-size: 15px;
+    max-width: fit-content;
 }
 
 @media (min-width: 450px) {
@@ -312,10 +395,14 @@ input {
                 flex-direction: column-reverse;
             } .promo-naturalia, .promo-lavieenclaire, .promo-epiceriegood, .promo-biocoop, .promo-biocbon {
                 font-size: 12px;
+            } .contenu-article1, .contenu-article2 {
+                font-size: 15px;
+            } .mags-partenaires, .livraison {
+                font-size: 15px;
             }
         }
  
-@media (min-width: 645px) {
+@media (min-width: 600px) {
    .articles {
        display: flex;
        flex-direction: row;
@@ -327,9 +414,9 @@ input {
     .contenu-article1, .contenu-article2 {
         font-size: 18px;
         max-width: fit-content;
-        height: 300px;
+        max-height: fit-content;
     } .image-article1, .image-article2 {
-        width: 25h;
+        width: 25vh;
         height: 15vh;
     } .titre-article1, .titre-article2 {
         font-size: 20px;
@@ -349,7 +436,8 @@ input {
     } .titre-biocbon, .titre-biocoop, .titre-epiceriegood, .titre-lavieenclaire, .titre-naturalia {
         font-size: 20px;
     } .infos-biocbon, .infos-biocoop, .infos-epiceriegood, .infos-lavieenclaire, .infos-naturalia {
-        font-size: 18px;
+        font-size: 17px;
+        color: white;
     }
 }
         
@@ -360,10 +448,70 @@ input {
         flex-direction: column;
         max-height: fit-content;
     } .articles {
-        height: 100vh;
+        margin-bottom: 15px;
     } .titre-article3, .titre-article4, .titre-article5 {
         font-size: 18px;
     } .nutriscore {
         display: none;
+    } .article3, .article4, .article5, .article6 {
+        max-width: fit-content;
+        max-height: fit-content;
+    } .article-principal, .article-principal2 {
+        max-width: fit-content;
+    } .titre-articleprincipal, .titre-articleprincipal2 {
+        font-size: 15px;
+        display: flex;
+        justify-content: flex-end;
+    } .contenu-articleprincipal, .contenu-articleprincipal2 {
+        padding: 0;
+        margin: 0;
     }
     }}
+
+@media (min-width: 800px) {
+    .articles {
+        display: flex;
+        flex-direction: row-reverse;
+        background-color: white;
+    } .contenu-article1, .contenu-article2 {
+        height: 70vh;
+    } .article1, .article2 {
+        background-color: #12F4A3;
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+@media (min-width: 1000px) {
+    .articles {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+    } .article1, .article2 {
+        height: 200px;
+        width: 700px;
+        display: flex;
+        justify-content: center;
+    } .contenu-article1, .contenu-article2 {
+        height: 20vh;
+    } .article3, .article4, .article5, .article6 {
+        height: 200px;
+        width: 700px;
+        display: flex;
+        justify-content: center;
+    } nav {
+        width: 1000px;
+    } .image-article2 {
+        display: flex;
+        float: left;
+    } .contenu-article3, .contenu-article4, .contenu-article5, .contenu-article6 {
+        display: flex;
+        align-items: center;
+        max-height: fit-content;
+        margin-left: 15px;
+    } .titre-article3, .titre-article4, .titre-article5, .titre-article6 {
+        width: 20vh;
+    } .suggestionsshops {
+        background-color: white;
+    }
+}
